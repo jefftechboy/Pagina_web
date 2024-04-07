@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!--MENU fuera de div- container-->
+    <nav class="navbar  menu ">
+          <!--LOGO-->
+          <img src="IMG/bosque.jpg" class="logo" alt="">
+          <!--TITULO-->
+          <h1 id="adm-sol"> ADMINISTRACION SOLICITUDES</h1>
+          <!-- BOTON DERECHA-->  
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <!-- CAJA DEL BOTON DERECHA-->  
+          <div class="offcanvas offcanvas-end width-200px caja-menu-2_ad" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- CABEZA DE LA CAJA -->
+            <div class="offcanvas-header caja_menu_cabeza">
+              <!-- LOGO USUARIO-->
+              <img src="IMG/log-usuario.jpg" width="50px" height="50px" alt="">
+              <p style="margin-left: 50px;">ADMINISTRADOR LOGEADO</p>
+              <!-- BOTON SALIR-->
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!--  CUERPO DE LA CAJA -->
+            <div class="offcanvas-body  caja_menu_cuerpo">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <!-- MODALES-->
+                  <!-- BOTON DATOS USUARIO-->
+                  <div class="b-modal b-caja">
+                      <a href="inicio_logeado_administrador.html">
+                          <button type="button" class="btn btn-primary ">INICIO</button>                
+                      </a>
+                  </div>
+                  <div class="b-modal b-caja">
+                      <a href="obras.html">
+                          <button type="button" class="btn btn-primary ">OBRAS</button>                
+                      </a>
+                  </div>
+                  <div class="b-modal b-caja">
+                      <a href="cuentas.html">
+                          <button type="button" class="btn btn-primary ">CUENTAS</button>                
+                      </a>
+                  </div>
+                  <!-- BOTON CERRAR SESION-->
+                  <div class="b-modal b-caja">
+                      <a href="inicio.html">
+                          <button type="button" class="btn btn-primary ">CERRAR SESION</button>                
+                      </a>
+                  </div>
+                </li>                                   
+              </ul>
+            </div>
+          </div>
+        
+    </nav> 
+      <div class="container-fluid">
+        <!--BARRA DE SOLICITUDES CUENTAS-->
+          <div class="row">
+              <div class="col-sm-4">
+                  <ul class="list-group cuentas-solicitud">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        SOLICITUDES APROBADAS
+                        <span class="badge text-bg-success rounded-pill">7</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-sm-4 ">
+                  <ul class="list-group cuentas-solicitud">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        SOLICITUDES PENDIENTES
+                        <span class="badge text-bg-warning rounded-pill">9</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-sm-4">
+                  <ul class="list-group cuentas-solicitud">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        SOLICITUDES NEGADAS
+                        <span class="badge text-bg-danger rounded-pill">10</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <!--FILA DE ESTADO DE SOLICITUDES-->
+          <div class="row">
+              <!-- SOLICITUDES APROBADAS -->
+              <div class="col-sm-4">
+                  <div class="list-group lis-c-actv lista-activas">
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action list-group-item-success" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                      N° SOLICITUD
+                    </button>
+                  </div>
+              </div>
+              <!-- SOLICITUDES PENDIENTES-->
+              <div class="col-sm-4">
+                    <div class="list-group lista-bloqueadas">
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                        N° SOLICITUD
+                      </button>
+                    </div>
+              </div>
+              <!-- SOLICITUDES NEGADAS-->
+              <div class="col-sm-4">
+                    <div class="list-group lista-borradas">
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                      <button type="button" class="list-group-item list-group-item-action list-group-item-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                        N° SOLICITUD
+                      </button>
+                    </div>
+              </div>          
+          </div>
+
+          <!--MODAL SOLICITUDES APROBADAS-->
+          <div class="modal fade modal-xl" id="exampleModal-6" tabindex="-1" aria-labelledby="exampleModalLabel-6" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">NOMBRE OBRA</h5>
+                        </div>
+                        <div class="col-sm-3">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">FECHA SOLICITUD</h5>
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">DD/MM/YYYY HH:MM</h5>
+                        </div>
+                        <div class="col-sm-3">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">FECHA APROBACION</h5>
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">DD/MM/YYYY HH:MM</h5>
+                        </div>
+                        <div class="col-sm-1">
+                          <button type="button" class="btn-close w-100" style="text-align: right;" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <img src="IMG/dedos-divinos.webp" width="100%" height="350px" alt="">
+                        </div>
+                        <div class="col-sm-4 text-center">  
+                            <img src="IMG/Logo_usuario.png" width="300px" height="300px" alt="">
+                            <p>NOMBRE ARTISTA</p>
+                        </div>
+                    </div>
+                    <div class="row p-10px">
+                        <div class="col-sm-4 text-center">
+                            <H4>CONCEPTO</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>ARTE</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>TECNICA</H4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea  readonly="readonly" class="form-control text-razon" style="width:100%; height: 160px;" rows="3" cols="75">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptate dolor cupiditate voluptatum, quod excepturi ducimus amet praesentium dolorem culpa qui ipsum veniam quasi nemo laboriosam sequi ex impedit ullam quos sunt distinctio dolore voluptates. Maxime omnis facere at ea esse qui voluptatibus molestias voluptatum nihil quia quam distinctio dolorem quibusdam corrupti odio, error tenetur asperiores labore enim mollitia aut natus unde! Cum quas earum alias rem consequatur unde optio, aliquam hic ea ipsam blanditiis itaque ratione, saepe autem voluptatibus rerum. Perferendis eius accusantium ad explicabo ex sit ipsam corrupti, animi nobis adipisci sequi non, optio ipsa nostrum veniam saepe.
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3>GALERIA</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                             <div id="demo-1" class="carousel slide " data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="2"></button>
+                  </div>
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active c-item">
+                      <a href="">
+                        <img src="IMG/arbol.jpg" height="500" width="100%" alt="Los Angeles" class="d-block  carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/bosque.jpg" height="500" width="100%"  alt="Chicago" class="d-block carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/playa.jpg" height="500" width="100%"  alt="New York" class="d-block carusel-img">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Left and right controls/icons -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demo-1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demo-1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+          <!-- MOADL SOLICITUDES PENDIENTES-->
+          <div class="modal fade modal-xl" id="exampleModal-7" tabindex="-1" aria-labelledby="exampleModalLabel-7" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">NOMBRE OBRA</h5>
+                        </div>
+                        <div class="col-sm-4">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">FECHA SOLICITUD</h5>
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">DD/MM/YYYY HH:MM</h5>
+                        </div>
+                        <div class="col-sm-1">
+                          <button type="button" class="btn-close w-100" style="text-align: right;" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <img src="IMG/dedos-divinos.webp" width="100%" height="350px" alt="">
+                        </div>
+                        <div class="col-sm-4 text-center">  
+                            <img src="IMG/Logo_usuario.png" width="300px" height="300px" alt="">
+                            <p>NOMBRE ARTISTA</p>
+                        </div>
+                    </div>
+                    <div class="row p-10px">
+                        <div class="col-sm-4 text-center">
+                            <H4>CONCEPTO</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>ARTE</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>TECNICA</H4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea  readonly="readonly" class="form-control text-razon" style="width:100%; height: 160px;" rows="3" cols="75">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptate dolor cupiditate voluptatum, quod excepturi ducimus amet praesentium dolorem culpa qui ipsum veniam quasi nemo laboriosam sequi ex impedit ullam quos sunt distinctio dolore voluptates. Maxime omnis facere at ea esse qui voluptatibus molestias voluptatum nihil quia quam distinctio dolorem quibusdam corrupti odio, error tenetur asperiores labore enim mollitia aut natus unde! Cum quas earum alias rem consequatur unde optio, aliquam hic ea ipsam blanditiis itaque ratione, saepe autem voluptatibus rerum. Perferendis eius accusantium ad explicabo ex sit ipsam corrupti, animi nobis adipisci sequi non, optio ipsa nostrum veniam saepe.
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3>GALERIA</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                             <div id="demo-1" class="carousel slide " data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="2"></button>
+                  </div>
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active c-item">
+                      <a href="">
+                        <img src="IMG/arbol.jpg" height="500" width="100%" alt="Los Angeles" class="d-block  carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/bosque.jpg" height="500" width="100%"  alt="Chicago" class="d-block carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/playa.jpg" height="500" width="100%"  alt="New York" class="d-block carusel-img">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Left and right controls/icons -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demo-1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demo-1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success me-auto "  >APROBAR</button>
+                    <button type="button" class="btn btn-primary btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      NEGAR
+                    </button>
+                </div>
+            </div>
+            </div>
+          </div>
+          <!-- MODAL SOLICITUDES NEGADAS-->
+          <div class="modal fade modal-xl" id="exampleModal-8" tabindex="-1" aria-labelledby="exampleModalLabel-8" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">NOMBRE OBRA</h5>
+                        </div>
+                        <div class="col-sm-3">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">FECHA SOLICITUD</h5>
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">DD/MM/YYYY HH:MM</h5>
+                        </div>
+                        <div class="col-sm-3">
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">FECHA NEGADA</h5>
+                          <h5 class="modal-title w-100 text-center"  style="font-size: 20px;" id="staticBackdropLabel">DD/MM/YYYY HH:MM</h5>
+                        </div>
+                        <div class="col-sm-1">
+                          <button type="button" class="btn-close w-100" style="text-align: right;" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <img src="IMG/dedos-divinos.webp" width="100%" height="350px" alt="">
+                        </div>
+                        <div class="col-sm-4 text-center">  
+                            <img src="IMG/Logo_usuario.png" width="300px" height="300px" alt="">
+                            <p>NOMBRE ARTISTA</p>
+                        </div>
+                    </div>
+                    <div class="row p-10px">
+                        <div class="col-sm-4 text-center">
+                            <H4>CONCEPTO</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>ARTE</H4>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <H4>TECNICA</H4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea  readonly="readonly" class="form-control text-razon" style="width:100%; height: 160px;" rows="3" cols="75">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptate dolor cupiditate voluptatum, quod excepturi ducimus amet praesentium dolorem culpa qui ipsum veniam quasi nemo laboriosam sequi ex impedit ullam quos sunt distinctio dolore voluptates. Maxime omnis facere at ea esse qui voluptatibus molestias voluptatum nihil quia quam distinctio dolorem quibusdam corrupti odio, error tenetur asperiores labore enim mollitia aut natus unde! Cum quas earum alias rem consequatur unde optio, aliquam hic ea ipsam blanditiis itaque ratione, saepe autem voluptatibus rerum. Perferendis eius accusantium ad explicabo ex sit ipsam corrupti, animi nobis adipisci sequi non, optio ipsa nostrum veniam saepe.
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3>GALERIA</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                             <div id="demo-1" class="carousel slide " data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo-1" data-bs-slide-to="2"></button>
+                  </div>
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active c-item">
+                      <a href="">
+                        <img src="IMG/arbol.jpg" height="500" width="100%" alt="Los Angeles" class="d-block  carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/bosque.jpg" height="500" width="100%"  alt="Chicago" class="d-block carusel-img">
+                      </a>
+                    </div>
+                    <div class="carousel-item c-item">
+                      <a href="">
+                        <img src="IMG/playa.jpg" height="500" width="100%"  alt="New York" class="d-block carusel-img">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Left and right controls/icons -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demo-1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demo-1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-1">
+                        <p>RAZON</p>
+                      </div>
+                      <div class="col-sm-11">
+                          <textarea  readonly="readonly" class="form-control text-razon" style="width:100%; height: 100px;" rows="3" cols="75"></textarea>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+          <!--  MODAL RAZON DE NEGACION-->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-8" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">RAZON DE NEGACION</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <textarea   class="form-control text-razon" style="width:100%; height: 100px;" rows="3" cols="75"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn btn-secondary me-auto" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                    VOLVER
+                  </button>
+                  <button type="button" class="btn btn-danger">NEGAR</button>
+                </div>
+                </div>
+             </div>
+            </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

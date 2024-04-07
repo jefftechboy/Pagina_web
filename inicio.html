@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    
+
+</head>
+<body>  
+
+  <!-- BARRA MENU-->
+  <nav class="navbar menu">
+    <!--LOGO-->
+    <img src="IMG/bosque.jpg"  class="logo" alt="">
+    <!--TITULO-->
+    <h1> GRUPO ZERO</h1>
+    <!-- BOTON DERECHA-->  
+    <button class="navbar-toggler" style="margin-right: 20px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+    </button> 
+      <!-- CAJA DEL BOTON DERECHA-->
+      <div class="offcanvas offcanvas-end caja-menu" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- CABEZA DE LA CAJA -->
+        <div class="offcanvas-header caja_menu_cabeza">
+          <!-- LOGO USUARIO-->
+            <img src="IMG/log-usuario.jpg" width="50px" height="50px" alt="">           
+            <p style="margin-left: auto;padding: 0%;">USUARIO NO LOGEADO</p>
+            <!-- BOTON SALIR-->
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!--  CUERPO DE LA CAJA -->
+        <div class="offcanvas-body  caja_menu_cuerpo">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <!-- MODALES-->
+              <!-- BOTON INICAR SESION-->
+              <div class="b-modal b-caja">
+                    <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">INICIAR SESION</button>                
+              </div>
+              <!-- BOTON CREAR CUENTA-->
+              <div class="b-modal b-caja">
+                    <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal-1" data-bs-whatever="@mdo">CREAR CUENTA</button>                
+              </div>
+              <!-- BOTON RECUPERAR CONTRASEÑA-->
+              <div class="b-modal b-caja">
+                <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal-2" data-bs-whatever="@mdo">RECUPERAR CONTRASEÑA</button>                
+              </div>
+              <!-- MODAL INICIO SESION FORMULARIO -->                           
+              <div class="modal fade modal-sm" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <!-- MODAL CABEZA -->   
+                        <div class="modal-header ">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">INICIO SESION</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- MODAL CABEZA -->
+                        <!-- MODAL CUERPO -->  
+                        <div class="modal-body ">
+                          <!-- ingreso de datos inicio sesion -->
+                          <form>
+                            <!-- ingreso de correo -->
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">CORREO:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <!-- ingreso de contraseña -->
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">CONTRASEÑA:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                              <p>¿se te olvido?</p>
+                                <div class="b-modal b-caja">
+                                  <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal-2" data-bs-whatever="@mdo">RECUPERAR CONTRASEÑA</button>                
+                                </div> 
+                            </div>
+                            <div class="modal-footer">
+                              <a href="inicio_logeado_usuario.html">
+                                <button type="button" class="btn btn-primary">INICIAR SESION</button>
+                              </a>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- MODAL CUERPO --> 
+                        <!-- MODAL BOTONES FORMULARIO --> 
+                      </div>
+                    </div>
+              </div>
+              <!-- MODAL CREAR CUENTA  FORMULARIO--> 
+              <div class="modal fade modal-sm" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <!-- MODAL CABEZA -->   
+                        <div class="modal-header ">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">CREAR CUENTA</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- MODAL CABEZA -->
+                        <!-- MODAL CUERPO -->  
+                        <div class="modal-body ">
+                          <!-- ingreso de datos inicio sesion -->
+                          <form>
+                            <!-- ingreso de correo -->
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">CORREO:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                              <p>
+                                ej: xxx...@gmail.com
+                              </p>
+                            </div>
+                            <!-- ingreso de nombre -->
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">NOMBRE:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <!-- ingreso de contraseña -->
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">CONTRASEÑA:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                              <p>
+                                5 letras 2 n° 1 mayuscula
+                              </p>
+                            </div>
+                            <!--BOTON ENVIAR-->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">REGISTRARSE</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <!-- MODAL RECUPERAR CONTRASEÑA  FORMULARIO--> 
+              <div class="modal fade modal-sm" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- MODAL CABEZA -->   
+                    <div class="modal-header ">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">RECUPERAR CONTRASEÑA</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- MODAL CABEZA -->
+                    <!-- MODAL CUERPO -->  
+                    <div class="modal-body ">
+                      <!-- ingreso de datos inicio sesion -->
+                      <form>
+                        <!-- ingreso de correo -->
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">CORREO:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                          <p>
+                            ej: xxx...@gmail.com
+                          </p>
+                        </div>
+                        <!--BOTON ENVIAR-->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">RECUPERAR</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </li>                                   
+          </ul>
+        </div>
+      </div>  
+  </nav>
+
+
+  <!--CONTENEDOR DE PAGINA-->
+  <div class="container-fluid">
+
+
+      <!-- CAROUSEL -->
+      <div class="row columna-carusel">
+        <!--columna titulo-->
+        <div class="col-sm-4 destacado">
+          <div class="row text-center">
+            <h3>DESTACADO DE LA SEMANA</h3>
+          </div>
+        </div>
+          <!-- columna carusel -->
+          <div class="col-sm-8 ">
+            <div id="demo" class="carousel slide " data-bs-ride="carousel">
+              <!-- Indicators/dots -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+              </div>
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                  <a  data-bs-toggle="modal" data-bs-target="#exampleModal-5">
+                    <img src="IMG/arbol.jpg" height="500px" width="1000px" alt="Los Angeles" class="d-block  carusel-img">
+                  </a>
+                </div>
+                <div class="carousel-item c-item">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal-5">
+                    <img src="IMG/bosque.jpg" height="500px" width="1000px"  alt="Chicago" class="d-block carusel-img">
+                  </a>
+                </div>
+                <div class="carousel-item c-item">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal-5">
+                    <img src="IMG/playa.jpg" height="500px" width="1000px"  alt="New York" class="d-block carusel-img">
+                  </a>
+                </div>
+              </div>
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+      </div>
+      
+
+      <!--FILA MUESTRA-->
+      <div class="row filas-muestras">
+        <!-- COLUMNA MUESTA-->
+        <div class="col-sm-10 muestra">
+            <div class="container contenedor-muestra-obras">
+              <div class="row">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 18rem; ">
+                      <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                        <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title">nombre obra</h5>
+                        <p class="card-text">mini descripcion (30 palabras)</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 18rem; ">
+                      <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                        <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title">nombre obra</h5>
+                        <p class="card-text">mini descripcion (30 palabras)</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 18rem; ">
+                      <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                        <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title">nombre obra</h5>
+                        <p class="card-text">mini descripcion (30 palabras)</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 18rem; ">
+                      <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                        <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title">nombre obra</h5>
+                        <p class="card-text">mini descripcion (30 palabras)</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card" style="width: 18rem;">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-5" >
+                      <img src="IMG/arbol.jpg" class="card-img-top" height="140px" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">nombre obra</h5>
+                      <p class="card-text">mini descripcion (30 palabras)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- COLUMNA FILTRO-->
+        <div class="col-sm-2 filtros" style="margin-top: 30px;">
+          <h4>FILTRO</h4>
+            <form action="">
+              <select class="form-select obras-paginado"  aria-label="Default select example">
+                <option selected>CONCEPTO</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select class="form-select obras-paginado" aria-label="Default select example">
+                <option selected>ARTE</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select class="form-select obras-paginado"  aria-label="Default select example">
+                <option selected>ARTISTA</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <button id="boton-filtro" type="button" class="submit btn btn-primary ">FILTRAR</button>
+            </form>
+            <ul class="pagination paginado">
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+            </ul>   
+        </div>
+      </div>
+
+
+    <!-- MODAL MUESTRA OBRA -->
+    <div class="modal fade modal-xl" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel-5" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title w-100 text-center"  id="staticBackdropLabel">NOMBRE OBRA</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <img src="IMG/dedos-divinos.webp" width="100%" height="350px" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">  
+                        <img src="IMG/Logo_usuario.png" width="300px" height="300px" alt="">
+                        <p>NOMBRE ARTISTA</p>
+                    </div>
+                </div>
+                <div class="row p-10px">
+                    <div class="col-sm-4 text-center">
+                        <H4>CONCEPTO</H4>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <H4>ARTE</H4>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <H4>TECNICA</H4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <textarea  readonly="readonly" class="form-control text-razon" style="width:100%; height: 160px;" rows="3" cols="75">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptate dolor cupiditate voluptatum, quod excepturi ducimus amet praesentium dolorem culpa qui ipsum veniam quasi nemo laboriosam sequi ex impedit ullam quos sunt distinctio dolore voluptates. Maxime omnis facere at ea esse qui voluptatibus molestias voluptatum nihil quia quam distinctio dolorem quibusdam corrupti odio, error tenetur asperiores labore enim mollitia aut natus unde! Cum quas earum alias rem consequatur unde optio, aliquam hic ea ipsam blanditiis itaque ratione, saepe autem voluptatibus rerum. Perferendis eius accusantium ad explicabo ex sit ipsam corrupti, animi nobis adipisci sequi non, optio ipsa nostrum veniam saepe.
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3>GALERIA</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                         <div id="demo-1" class="carousel slide " data-bs-ride="carousel">
+              <!-- Indicators/dots -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo-1" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo-1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo-1" data-bs-slide-to="2"></button>
+              </div>
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                  <a href="">
+                    <img src="IMG/arbol.jpg" height="500" width="100%" alt="Los Angeles" class="d-block  carusel-img">
+                  </a>
+                </div>
+                <div class="carousel-item c-item">
+                  <a href="">
+                    <img src="IMG/bosque.jpg" height="500" width="100%"  alt="Chicago" class="d-block carusel-img">
+                  </a>
+                </div>
+                <div class="carousel-item c-item">
+                  <a href="">
+                    <img src="IMG/playa.jpg" height="500" width="100%"  alt="New York" class="d-block carusel-img">
+                  </a>
+                </div>
+              </div>
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo-1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo-1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+          <div class="row">
+            <div class="col-sm-4" style="margin-left: 40px; width: 400px;">
+              <h3>CONTACTO</h3>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">NOMBRE</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">CORREO</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">TELEFONO</label>
+                  <input type="number" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <div class="col-sm-6">
+                    <P>DESCRIPCION</P>
+                    <textarea  class="form-control text-razon" style="width:375px; height: 150px;" rows="3" cols="75"></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">ENVIAR</button>
+              </form>
+            </div>
+            <div class="col-sm-5 ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11641.707572658732!2d-70.64865990868296!3d-33.45004672840537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a6fd47e465%3A0x5d0fa12b4d88ae82!2sPalacio%20de%20La%20Moneda!5e0!3m2!1ses!2scl!4v1712088891656!5m2!1ses!2scl"  
+                class="google-maps" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+            <div class="col-sm-3 contactos">
+              <p>DIRECCION</p>
+              <p>WSP +56 9 2020 1919</p>
+              <p>correo contacto .....@gmail.com</p>
+            </div>
+          </div>
+    </footer>    
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
